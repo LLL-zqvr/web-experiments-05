@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
         String password = req.getParameter("password");
 
         String url;
-        if("9376".equals(account) && "123456".equals(password)){
+        if("9376".equals(account) && "12345".equals(password)){
             User u = new User("liu");
             req.getSession().setAttribute("user",u);
             url = "/filter/welcome";
