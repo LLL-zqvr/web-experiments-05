@@ -32,6 +32,9 @@ public class LoginServlet extends HttpServlet {
             url = "/filter/login";
         }
         System.out.println("7");
+        //服务器执行重定向sendRedirect()方法，要求客户端重新定向到指定地址
+        //浏览器地址栏为重定向的地址
+        //且能且仅能发出get重定向请求
         resp.sendRedirect(req.getContextPath()+url);
         //System.out.println(req.getContextPath()+url);
     }
