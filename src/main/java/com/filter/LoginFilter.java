@@ -1,5 +1,5 @@
-package com.example.filter;
-import com.example.entity.User;
+package com.filter;
+import com.entity.User;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebFilter;
@@ -26,14 +26,12 @@ public class LoginFilter extends HttpFilter {
         }
         User user = (User) req.getSession().getAttribute("user");
         if(user != null){
-//            chain.doFilter(req,res);
-//            System.out.println("**************************" + user);
-            res.sendRedirect(req.getContextPath() + "/filter/welcome");
-        }else {
+            chain.doFilter(req,res);
+        }
             //重定向
             //request.getContextPath()获取的是项目名
             res.sendRedirect(req.getContextPath() + "/filter/login");
             //System.out.println(req.getContextPath() + "/login");
-        }
+
     }
 }
