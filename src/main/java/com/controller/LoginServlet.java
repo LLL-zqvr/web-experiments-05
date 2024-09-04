@@ -36,6 +36,6 @@ public class LoginServlet extends HttpServlet {
         //浏览器地址栏为重定向的地址
         //且能且仅能发出get重定向请求
         resp.sendRedirect(req.getContextPath()+url);
-        //System.out.println(req.getContextPath()+url);
+        //System.out.println(req.getContextPath()1);
     }
 }

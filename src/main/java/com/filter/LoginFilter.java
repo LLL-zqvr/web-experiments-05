@@ -23,7 +23,6 @@ public class LoginFilter extends HttpFilter {
             //如果相等，既是登录页面的话直接就放过去
             if(e.equals(req.getServletPath())) {
                 //System.out.println(e +" " + req.getServletPath());
-                System.out.println("2");
                 chain.doFilter(req,res);
                 return;
             }
